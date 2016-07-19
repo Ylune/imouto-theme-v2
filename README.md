@@ -60,3 +60,6 @@ var INF={
 
 ##意见建议
 使用过程中出现BUG或者提建议，欢迎给我邮件 (i@une.moe) / [QQ](tencent://Message/?uin=461921013)，也可以提交 Issues / Pull request
+
+##Licence
+Apache Licence
