@@ -318,7 +318,7 @@ var
 			},100);
 
 		win.onscroll = function(e){
-			if(!body.offsetWidth < 800)
+			if(win.screen.width > 800)
 				return false
 
 			var n = $('#nav');
