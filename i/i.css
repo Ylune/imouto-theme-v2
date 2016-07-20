@@ -213,20 +213,23 @@ header:before {
 	transform:translateX(20px);
 }
 article {
-	padding:1em 0;
+	padding:1em 0 0 0;
 }
 [data-n='arti']{
 	position: relative;
-	margin-top: 3em;
 }
 
 .p-title {
 	color: #FFF;
 	text-shadow: 0 0 2px #fff;
 	font-size:2.5em;
-	line-height:1.2em;
-	padding:.2em .2em 0;
+	line-height:1.35em;
+	padding:.15em .2em;
 	text-align:center;
+	transition: transform .2s ease;
+}
+.p-title:hover{
+	transform: scale(1.05,1.05)
 }
 .cover {
 	background:url(loading.gif) 50% 50% no-repeat;
@@ -302,9 +305,28 @@ article {
 	display:inline-block;
 	vertical-align:top;
 }
+.p-footer{
+	background: rgba(255, 255, 255, 0.33);
+	padding: 1.25em 2em;
+}
+.p-footer li {
+	display: inline-block;
+	list-style: none;
+	float: right;
+	padding-left: 1em;
+	font-style: italic;
+}
+.p-footer li:nth-child(1):before{
+	content: 'Type :  ';
+}
+.p-footer li:nth-child(2):before{
+	content: 'Author :  ';
+}
+.p-footer li:nth-child(3):before{
+	content: 'Date :  ';
+}
 .p time {
-	display:block;
-	color:#666;
+	color: #323232;
 }
 .at {
 	color:#05A;
@@ -384,7 +406,7 @@ a,input {
 		/*display: flex;*/
 		/*display: -webkit-flex;*/
 		/*display: -webkit-box;		呵呵，UC不支持flex我也没办法*/
-		border-bottom: 1px #fff solid;
+		box-shadow: 0 3px 20px #808080;
 	}
 	#nav li{
 		display: table-cell;
@@ -404,6 +426,13 @@ a,input {
 	}
 	#nav li:hover a:after,#nav li:hover a:before{
 		display: none;
+	}
+	.nav-f{
+		position: fixed !important;
+		top: 0 !important;
+		left: 0 !important;
+		z-index: 999 !important;
+		margin: 0 !important;
 	}
 	#S{
 		display: none;
