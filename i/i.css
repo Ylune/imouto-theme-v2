@@ -118,7 +118,7 @@ header a {
 header h1 {
 	font-size:2.2em;
 	line-height:1.5;
-	color: #FFFFFF;
+	color: #FFF;
 	margin-top: .05em;
 }
 header p {
@@ -162,7 +162,7 @@ header:before {
 	padding: .65em 0 .65em 1em;
 	width:100%;
 	background-color: #6c6c6c;
-	color: #FFFFFF;
+	color: #FFF;
 	font-size:1.3em;
 }
 #nav li a:before{
@@ -244,7 +244,7 @@ article {
 	min-height:300px;
 }
 .p-text {
-	color: #e8e8e8;
+	color: #fff;
 	padding: 0 4em;
 	word-wrap:break-word;
 	word-break:normal;
@@ -318,15 +318,18 @@ article {
 }
 .p-footer li:nth-child(1):before{
 	content: 'Type :  ';
+	color: rgba(0,0,0,0.55);
 }
 .p-footer li:nth-child(2):before{
 	content: 'Author :  ';
+	color: rgba(0,0,0,0.55);
 }
 .p-footer li:nth-child(3):before{
 	content: 'Date :  ';
+	color: rgba(0,0,0,0.55);
 }
 .p time {
-	color: #323232;
+	color: #716f6f;
 }
 .at {
 	color:#05A;
