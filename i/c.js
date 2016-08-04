@@ -66,7 +66,8 @@ var
 
 							//console.log(o[i].title);
 							o[i].categoryName=INF.c[o[i].category][0];
-							o[i].bg = "background-color:"+toRgb(INF.c[o[i].category][2]);
+							o[i].bg = (INF.c[o[i].category][2])?("background-color:"+toRgb(INF.c[o[i].category][2])+';'):('background-color:#46b19d'+';');
+							o[i].color = (INF.c[o[i].category][3])?("color:"+toRgb(INF.c[o[i].category][3])):'color:#fff';
 
 
 							o[i].author=INF.u[o[i].authorId];
@@ -112,6 +113,7 @@ var
 								hljs.initHighlighting();
 							});
 						}
+
 					});
 				},c:function(s){
 					Q.home(s[1],s[0]);
@@ -139,7 +141,8 @@ var
 
 
 						o.categoryName=INF.c[o.category][0];
-						o.bg = "background-color:"+toRgb(INF.c[o.category][2]);
+						o.bg = (INF.c[o.category][2])?("background-color:"+toRgb(INF.c[o.category][2])+';'):('background-color:#46b19d'+';');
+						o.color = (INF.c[o.category][3])?("color:"+toRgb(INF.c[o.category][3])):'color:#fff';
 
 						var A;
 						if(A=$('#nav a.a'))
@@ -240,6 +243,7 @@ var
 
 		$.S('title')[0].innerText = INF.n;
 
+
 		$('#nav').innerHTML=Mustache.render($('#_nav_').innerHTML,function(){
 			var c=[];
 			for(var i in INF.c)
@@ -248,7 +252,7 @@ var
 						id:i,
 						name:INF.c[i][0],
 						des:INF.c[i][1],
-						bg:'background-color:'+toRgb(INF.c[i][2])
+						bg:(INF.c[i][2])?("background-color:"+toRgb(INF.c[i][2])):'background-color:#46b19d'
 					});
 			return {
 				c:c,
@@ -256,6 +260,7 @@ var
 
 			}
 		}());
+
 
 		var Title=document.title//+=' - '+$('p').innerHTML;
 

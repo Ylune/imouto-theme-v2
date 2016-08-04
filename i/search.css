@@ -1,16 +1,21 @@
 
 /*搜索部分样式*/
-
-#S{font-size:14px;position:relative;margin:0 auto;max-width:1200px;}
-#S .I{position:relative;margin:2em;}
-#S input{border:0;padding:.5em 1em .5em 2em;width:100%;
+#S{position:absolute;top:2em;right:5em;z-index:222;font-size:14px;margin:0 auto;max-width:1200px;}
+#S .I{position:relative;width:3em;height:4em;transition: all .2s ease-in-out;}
+#S input{display:none;border:0;padding:.5em 1em .5em 2em;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	-webkit-appearance:none;
 	background:#F2F2F2;border-radius:.5em;margin:0;
 	font-size:24px;
-	opacity: .85}
+	opacity: .85;
+}
 #S input:focus{box-shadow:0 0 25px #E4E4E4 inset;}
+#S input.a{
+	display: block !important;
+	width:100%;
+
+}
 
 .I::before,.I::after{content:'';position:absolute;z-index:1;pointer-events:none;}
 

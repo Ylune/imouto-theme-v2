@@ -1,7 +1,8 @@
 .DS {
     padding:0 2em;
     margin:0 auto;
-    background-color: rgba(36,97,150,.9);
+    color: #cacaca;
+    background-color: #404853;
 }
 .DS textarea {
     width:100%;
@@ -47,7 +48,7 @@
     color:#666
 }
 .DS-post a.user {
-    color:#04A
+    color:#89ae97
 }
 .DS-post .avatar {
     position: absolute;
@@ -67,9 +68,14 @@
     padding:.2em .2em .2em 2.7em
 }
 .DS-post .agent {
-    font-size:.7em;
-    opacity:.3;
-    margin:0 .4em
+    font-size: .85em;
+    opacity: .3;
+    padding: .25em .5em;
+    box-sizing: border-box;
+    margin: 0 .4em;
+    color: rgba(246, 255, 238, 1);
+    background-color: #111211;
+    border-radius: 8px
 }
 .DS-post p.msg {
     padding:8px 0;
@@ -109,7 +115,7 @@
     float: right;
     border:0;
     border-radius:.5em;
-    background: #0072e2;
+    background: #4d5453;
     color:#FFF;
     line-height:2;
     padding:0 1em;
@@ -123,7 +129,7 @@
 }
 @keyframes bt {
     from{
-        background: #007af1;
+        background: #4d5453;
     }
     to{
         background: #1e778a;
@@ -190,7 +196,7 @@
     opacity:2
 }
 .C-li{
-    background: rgba(109, 157, 197, 0.93);
+    background: rgba(0,0,0,.15);
     border-radius: .8em;
 }
 .DS-visitor {
