@@ -49,7 +49,7 @@ var
 							var a;
 
 							o[i].html=C.makeHtml($.ex(o[i].text)
-								.replace(/<!--more-->/,'<p class="more"><a href="#!'+o[i].pid+'">- 查看更多 -</a></p>'));
+								.replace(/<!--more-->/,'<a href="#!'+o[i].pid+'"'+'><p class="more">查看更多</p></a>'));
 
 							if(o[i].cover)
 								if(o[i].cover.match(/^[\w]{16,32}$/))
@@ -203,8 +203,11 @@ var
 		Q.page=Q.home;
 
 		var toRgb = function(c){
-			if (typeof c == 'undefined')
+			if (typeof c != 'string')
 				return
+
+			if(c.match(/[RGB|RGBA]{3}/ig))
+				return c
 
 			c = c.split('.');
 
@@ -226,8 +229,6 @@ var
 				}
 				r.push(p);
 				return "RGBA(" + r.join(",") + ")";
-			}else{
-				return c;
 			}
 		};
 
@@ -322,7 +323,7 @@ var
 				}
 			},100);
 
-		win.onscroll = function(e){
+		W.onscroll = function(e){
 			if(win.screen.width > 800)
 				return false
 
@@ -340,5 +341,3 @@ var
 		/*这行注释的意义在于，愿看到代码的能保留上面一行 OAQ */
 		return Q
 	}(iTorr,window,document);
-
-$.lcss('i/am.css')
